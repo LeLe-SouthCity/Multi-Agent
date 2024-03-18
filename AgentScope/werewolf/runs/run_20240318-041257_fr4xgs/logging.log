@@ -1,0 +1,144 @@
+2024-03-18 04:12:58.836 | INFO     | agentscope.models:read_model_configs:138 - Load configs for model wrapper: gpt-4, my_post_api
+2024-03-18 04:12:59.152 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-18 04:12:59.152 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-18 04:12:59.153 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs/run_20240318-041257_fr4xgs/agentscope.db]
+2024-03-18 04:12:59.155 | INFO     | agentscope.models.model:__init__:225 - Initialize model [gpt-4] with config:
+{
+  "model_name": "gpt-4",
+  "client_args": null,
+  "generate_args": {
+    "temperature": 0.5
+  },
+  "budget": null,
+  "model_type": "openai"
+}
+2024-03-18 04:12:59.204 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 04:12:59.207 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.cost] to SqliteMonitor with unit [dollor] and quota [None]
+2024-03-18 04:12:59.532 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.prompt_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 04:13:00.059 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.completion_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 04:13:00.468 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.total_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 04:13:00.542 | INFO     | agentscope.models.model:__init__:225 - Initialize model [gpt-4] with config:
+{
+  "model_name": "gpt-4",
+  "client_args": null,
+  "generate_args": {
+    "temperature": 0.5
+  },
+  "budget": null,
+  "model_type": "openai"
+}
+2024-03-18 04:13:00.588 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 04:13:00.591 | INFO     | agentscope.models.model:__init__:225 - Initialize model [gpt-4] with config:
+{
+  "model_name": "gpt-4",
+  "client_args": null,
+  "generate_args": {
+    "temperature": 0.5
+  },
+  "budget": null,
+  "model_type": "openai"
+}
+2024-03-18 04:13:00.645 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 04:13:00.647 | INFO     | agentscope.models.model:__init__:225 - Initialize model [gpt-4] with config:
+{
+  "model_name": "gpt-4",
+  "client_args": null,
+  "generate_args": {
+    "temperature": 0.5
+  },
+  "budget": null,
+  "model_type": "openai"
+}
+2024-03-18 04:13:00.702 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 04:13:00.704 | INFO     | agentscope.models.model:__init__:225 - Initialize model [gpt-4] with config:
+{
+  "model_name": "gpt-4",
+  "client_args": null,
+  "generate_args": {
+    "temperature": 0.5
+  },
+  "budget": null,
+  "model_type": "openai"
+}
+2024-03-18 04:13:00.756 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 04:13:00.758 | INFO     | agentscope.models.model:__init__:225 - Initialize model [gpt-4] with config:
+{
+  "model_name": "gpt-4",
+  "client_args": null,
+  "generate_args": {
+    "temperature": 0.5
+  },
+  "budget": null,
+  "model_type": "openai"
+}
+2024-03-18 04:13:00.811 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+Moderator: Player1 and Player2, if you are the only werewolf, eliminate a player. Otherwise, discuss with your teammates and reach an agreement. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say to others",
+    "agreement": "whether the discussion reached an agreement or not(true/false)"
+}
+Player1: Player2, I believe Player3 might be a good choice for elimination. They haven't been contributing much to the discussions. What are your thoughts?
+Player2: I agree with you, Player1. Player3 seems to be a safe choice for us.
+Moderator: Which player do you vote to kill? Respond in the following format which can be loaded by python json.loads()
+{{
+   "thought": "thought" ,
+   "speak": "player_name"
+}}
+2024-03-18 04:13:09.471 | ERROR    | agentscope.utils.logging_utils:write:34 - Traceback (most recent call last):
+  File "/home/ubuntu/Multi-Agent/AgentScope/werewolf/werewolf.py", line 137, in <module>
+    main()
+  File "/home/ubuntu/Multi-Agent/AgentScope/werewolf/werewolf.py", line 48, in main
+    votes = [
+  File "/home/ubuntu/Multi-Agent/AgentScope/werewolf/werewolf.py", line 49, in <listcomp>
+    extract_name_and_id(wolf(hint).content)[0] for wolf in wolves
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/agentscope/agents/agent.py", line 117, in __call__
+    res = self.reply(*args, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/agentscope/agents/dict_dialog_agent.py", line 140, in reply
+    response = self.model(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/agentscope/models/model.py", line 165, in checking_wrapper
+    response = model_call(self, *args, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/agentscope/models/openai_model.py", line 202, in __call__
+    response = self.client.chat.completions.create(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/openai/_utils/_utils.py", line 270, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/openai/resources/chat/completions.py", line 645, in create
+    return self._post(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/openai/_base_client.py", line 1088, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/openai/_base_client.py", line 853, in request
+    return self._request(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/openai/_base_client.py", line 877, in _request
+    response = self._client.send(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    return self._connection.handle_request(request)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 143, in handle_request
+    raise exc
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 113, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 186, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 224, in _receive_event
+    data = self._network_stream.read(
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/site-packages/httpcore/_backends/sync.py", line 126, in read
+    return self._sock.recv(max_bytes)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/ssl.py", line 1260, in recv
+    return self.read(buflen)
+  File "/home/ubuntu/miniconda3/envs/metagpt/lib/python3.9/ssl.py", line 1135, in read
+    return self._sslobj.read(len)
+KeyboardInterrupt
+

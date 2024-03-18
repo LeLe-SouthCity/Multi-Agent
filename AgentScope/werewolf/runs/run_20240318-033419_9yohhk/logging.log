@@ -1,0 +1,26 @@
+2024-03-18 03:34:20.220 | INFO     | agentscope.models:read_model_configs:171 - Load configs for model wrapper: gpt-4, my_post_api
+2024-03-18 03:34:20.330 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-18 03:34:20.331 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-18 03:34:20.331 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs/run_20240318-033419_9yohhk/agentscope.db]
+2024-03-18 03:34:20.334 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 03:34:20.396 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 03:34:20.398 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.cost] to SqliteMonitor with unit [dollor] and quota [None]
+2024-03-18 03:34:20.698 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.prompt_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 03:34:21.041 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.completion_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 03:34:21.274 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.total_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 03:34:21.365 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 03:34:21.415 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 03:34:21.417 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 03:34:21.459 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 03:34:21.462 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 03:34:21.507 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 03:34:21.509 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 03:34:21.550 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 03:34:21.552 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 03:34:21.592 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+Moderator: Player1 and Player2, if you are the only werewolf, eliminate a player. Otherwise, discuss with your teammates and reach an agreement. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say to others",
+    "agreement": "whether the discussion reached an agreement or not(true/false)"
+}
