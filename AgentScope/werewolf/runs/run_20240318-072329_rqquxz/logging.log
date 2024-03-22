@@ -1,0 +1,65 @@
+2024-03-18 07:23:30.475 | INFO     | agentscope.models:read_model_configs:171 - Load configs for model wrapper: gpt-4, my_post_api
+2024-03-18 07:23:30.607 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-18 07:23:30.608 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-18 07:23:30.608 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs/run_20240318-072329_rqquxz/agentscope.db]
+2024-03-18 07:23:30.613 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:23:30.662 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:23:30.666 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.cost] to SqliteMonitor with unit [dollor] and quota [None]
+2024-03-18 07:23:30.937 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.prompt_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 07:23:31.088 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.completion_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 07:23:31.265 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.total_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 07:23:31.330 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:23:31.379 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:23:31.382 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:23:31.429 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:23:31.432 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:23:31.476 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:23:31.479 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:23:31.522 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:23:31.525 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:23:31.568 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+Moderator: Player1 and Player2, if you are the only werewolf, eliminate a player. Otherwise, discuss with your teammates and reach an agreement. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say to others",
+    "agreement": "whether the discussion reached an agreement or not(true/false)"
+}
+Player1: I think we should consider Player5, they have been very active in discussions and could pose a threat to us.
+Player2: I agree with you, Player1. Player5 has been actively participating in the discussions. It might be a good idea to eliminate them.
+Moderator: Which player do you vote to kill? Respond in the following format which can be loaded by python json.loads()
+{{
+   "thought": "thought" ,
+   "speak": "player_name"
+}}
+Player1: Player5
+Player2: Player5
+Moderator: The player with the most votes is Player5.
+Moderator: Player6, you're the witch. Tonight Player5 is eliminated. Would you like to resurrect Player5? Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say",
+    "resurrect": true/false
+}
+Player6: I'm sorry to see Player5 go, but I think it's too early to make any drastic moves.
+Moderator: Would you like to eliminate one player? Respond in the following json format which can be loaded by python json.loads()
+{{
+    "thought": "thought", 
+    "speak": "thoughts summary to say",
+    "eliminate": ture/false
+}}
+Player6: I don't think we have enough information yet to make a move. It's too early.
+Moderator: Player5, you're the seer. Which player in Player1, Player2, Player3, Player4, Player5 and Player6 would you like to check tonight? Respond in the following json format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "player_name"
+}
+Player5: Player3
+Moderator: Okay, the role of Player3 is a villager.
+Moderator: The day is coming, all the players open your eyes. Last night, the following player(s) has been eliminated: Player5.
+Moderator: Now the alive players are Player1, Player2, Player3, Player4 and Player6. Given the game rules and your role, based on the situation and the information you gain, to vote a player eliminated among alive players and to win the game, what do you want to say to others? You can decide whether to reveal your role. Respond in the following JSON format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "thought summary to say to others"
+}
+Player1: I'm shocked about Player5. We need to stick together and figure out who the werewolves are. Does anyone have any suspicions or information that could help us?
+Player2: I'm really shocked about Player5. We need to figure this out together. Does anyone have any suspicions or insights to share?

@@ -1,0 +1,410 @@
+2024-03-18 07:39:00.898 | INFO     | agentscope.models:read_model_configs:171 - Load configs for model wrapper: gpt-4, my_post_api
+2024-03-18 07:39:01.520 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-18 07:39:01.521 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-18 07:39:01.521 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs/run_20240318-073859_2rneya/agentscope.db]
+2024-03-18 07:39:01.525 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:39:01.569 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:39:01.572 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.cost] to SqliteMonitor with unit [dollor] and quota [None]
+2024-03-18 07:39:01.637 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.prompt_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 07:39:01.796 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.completion_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 07:39:02.433 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.total_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 07:39:02.532 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:39:02.581 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:39:02.584 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:39:02.635 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:39:02.638 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:39:02.699 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:39:02.701 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:39:02.741 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 07:39:02.743 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 07:39:02.786 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+Moderator: Player1 and Player2, if you are the only werewolf, eliminate a player. Otherwise, discuss with your teammates and reach an agreement. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say to others",
+    "agreement": "whether the discussion reached an agreement or not(true/false)"
+}
+Player1: I propose we consider Player3, they've been quite observant.
+Player2: I see your point about Player3, but what about Player4? They've been quite vocal, which might be a problem for us.
+Player1: Player2, you have a valid point about Player4. Their vocal nature might be a problem for us. But, Player3's observant nature can also be a threat. We need to be careful.
+Player2: I see both Player3 and Player4 as potential threats. We need to decide who to eliminate.
+Moderator: Which player do you vote to kill? Respond in the following format which can be loaded by python json.loads()
+{{
+   "thought": "thought" ,
+   "speak": "player_name"
+}}
+Player1: Player3
+Player2: Player3
+Moderator: The player with the most votes is Player3.
+Moderator: Player6, you're the witch. Tonight Player3 is eliminated. Would you like to resurrect Player3? Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say",
+    "resurrect": true/false
+}
+Player6: I'm contemplating whether to save Player3. It's difficult to make a decision without any solid clues.
+Moderator: Would you like to eliminate one player? Respond in the following json format which can be loaded by python json.loads()
+{{
+    "thought": "thought", 
+    "speak": "thoughts summary to say",
+    "eliminate": ture/false
+}}
+Player6: I think it's too early for drastic measures. We need more information.
+Moderator: Player5, you're the seer. Which player in Player1, Player2, Player3, Player4, Player5 and Player6 would you like to check tonight? Respond in the following json format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "player_name"
+}
+Player5: Player3
+Moderator: Okay, the role of Player3 is a villager.
+Moderator: The day is coming, all the players open your eyes. Last night, the following player(s) has been eliminated: Player3.
+Moderator: Now the alive players are Player1, Player2, Player4, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to vote a player eliminated among alive players and to win the game, what do you want to say to others? You can decide whether to reveal your role. Respond in the following JSON format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "thought summary to say to others"
+}
+Player1: I can't believe Player3 is gone! They were so observant, it's a big loss. I've been noticing that Player4 has been quite vocal. Could they be trying to divert attention from themselves?
+Player2: I agree with Player1. Player4 has been quite vocal. It seems like they are trying to divert attention from themselves. We need to keep an eye on them.
+Player4: I can understand why you might think I'm trying to divert attention, but I assure you, I'm a villager. I've been vocal because I'm trying to figure out who the werewolves are, just like everyone else. Isn't it a bit suspicious that both Player1 and Player2 are accusing me? Could they be the werewolves trying to eliminate a villager?
+Player5: I understand the suspicions against Player4, but we need to be careful not to let the werewolves manipulate us into killing our own. I have some information that might help. I'm the seer, and last night, I checked Player3. They were a villager. I think we need to reconsider our suspicions and think about who could have benefited from Player3's death.
+Player6: Player5's information is crucial for us. I agree with Player4, it's suspicious that Player1 and Player2 were quick to accuse. Let's keep that in mind before making any decision.
+Moderator: Now the alive players are Player1, Player2, Player4, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to win the game, it's time to vote one player eliminated among the alive players, please cast your vote on who you believe is a werewolf. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "player_name"
+}
+Player1: Player4
+Player2: Player4
+Player4: Player1
+Player5: Player1
+Player6: Player1
+Moderator: Player1 has been voted out.
+Moderator: The game goes on.
+Moderator: Player2, if you are the only werewolf, eliminate a player. Otherwise, discuss with your teammates and reach an agreement. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say to others",
+    "agreement": "whether the discussion reached an agreement or not(true/false)"
+}
+Player2: Player5
+Moderator: Which player do you vote to kill? Respond in the following format which can be loaded by python json.loads()
+{{
+   "thought": "thought" ,
+   "speak": "player_name"
+}}
+2024-03-18 07:40:16.951 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player5",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941tPTh3CICdIPVNihzIO8FgladBC",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player5",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747615,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1565,
+            "total_tokens": 1567
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 1 / 3
+2024-03-18 07:40:18.889 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player5",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941tSlUAVf2rwuIK08xboeHul1zZ6",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player5",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747618,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1565,
+            "total_tokens": 1567
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 2 / 3
+2024-03-18 07:40:21.869 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player5",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941tVS5eHGJO4Pg1PAamvi7twWnUm",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player5",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747621,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1565,
+            "total_tokens": 1567
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 3 / 3
+Player2: Player5
+Moderator: The player with the most votes is Player5.
+Moderator: Player6, you're the witch. Tonight Player5 is eliminated. Would you like to resurrect Player5? Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say",
+    "resurrect": true/false
+}
+Player6: I think we should consider the possibility that Player5 is telling the truth about being the seer.
+Moderator: Player5, you're the seer. Which player in Player2, Player4, Player5 and Player6 would you like to check tonight? Respond in the following json format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "player_name"
+}
+2024-03-18 07:40:28.450 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player2",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941tbcHwfavt6v6LpkjvDl86n1nfh",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player2",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747627,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1290,
+            "total_tokens": 1292
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 1 / 3
+2024-03-18 07:40:30.236 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player2",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941tdcyGVsJZjxyVfmIHyK8UJL2Db",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player2",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747629,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1290,
+            "total_tokens": 1292
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 2 / 3
+2024-03-18 07:40:33.121 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player4",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941tg76UniKRHyj4S6qXCXCzJv0Fh",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player4",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747632,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1290,
+            "total_tokens": 1292
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 3 / 3
+Player5: Player4
+Moderator: Okay, the role of Player4 is a villager.
+Moderator: The day is coming, all the players open your eyes. Last night is peaceful, no player is eliminated.
+Moderator: Now the alive players are Player2, Player4, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to vote a player eliminated among alive players and to win the game, what do you want to say to others? You can decide whether to reveal your role. Respond in the following JSON format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "thought summary to say to others"
+}
+Player2: I'm not sure about Player5's claim of being a seer. They could be lying to gain our trust. Also, Player4 has been very vocal. They might be trying to divert attention from themselves. We need to be careful.
+Player4: I think it's suspicious that Player2 is trying to cast doubt on Player5 who claimed to be the seer. Could Player2 be a werewolf trying to eliminate the seer? We should consider this possibility before making our decision.
+Player5: I checked Player4 last night and they are a villager. I think we can trust them. However, I find it suspicious that Player2 is trying to cast doubt on me. Could they be a werewolf trying to eliminate me since I'm the seer? We should consider this possibility.
+2024-03-18 07:40:54.903 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "I agree with Player5. It's suspicious that Player2 is trying to cast doubt on the seer. We should keep that in mind before making any decision.",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941u03YIbDJzbmpU4NtepPoRhsYr6",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "I agree with Player5. It's suspicious that Player2 is trying to cast doubt on the seer. We should keep that in mind before making any decision.",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747652,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 33,
+            "prompt_tokens": 1715,
+            "total_tokens": 1748
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 1 / 3
+Player6: Player2, your skepticism about Player5's role is suspicious. Could you be trying to get rid of the seer?
+Moderator: Now the alive players are Player2, Player4, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to win the game, it's time to vote one player eliminated among the alive players, please cast your vote on who you believe is a werewolf. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "player_name"
+}
+Player2: Player4
+Player4: Player2
+2024-03-18 07:41:05.506 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player2",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941uC5UeOFAuWTNh5iKXm9QrMCvUP",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player2",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747664,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1792,
+            "total_tokens": 1794
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 1 / 3
+Player5: Player2
+2024-03-18 07:41:10.129 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "Player2",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-941uHwGEGkbA70UJXjjOyKDUIiaxd",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "Player2",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747669,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 1879,
+            "total_tokens": 1881
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 1 / 3
+Player6: Player2
+Moderator: Player2 has been voted out.
+Moderator: The game is over. The werewolves have been defeated, and the village is safe once again!

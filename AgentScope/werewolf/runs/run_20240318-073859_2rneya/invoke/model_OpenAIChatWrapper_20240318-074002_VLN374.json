@@ -1,0 +1,89 @@
+{
+    "model_class": "OpenAIChatWrapper",
+    "timestamp": "20240318-074002",
+    "arguments": {
+        "model": "gpt-4",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Act as a player in a werewolf game. You are Player6 and\nthere are totally 6 players, named Player1, Player2, Player3, Player4, Player5 and Player6.\n\nPLAYER ROLES:\nIn werewolf game, players are divided into two werewolves, two villagers, one seer and one witch. Note only werewolves know who are their teammates.\nWerewolves: They know their teammates' identities and attempt to eliminate a villager each night while trying to remain undetected.\nVillagers: They do not know who the werewolves are and must work together during the day to deduce who the werewolves might be and vote to eliminate them.\nSeer: A villager with the ability to learn the true identity of one player each night. This role is crucial for the villagers to gain information.\nWitch: A character who has a one-time ability to save a player from being eliminated at night (sometimes this is a potion of life) and a one-time ability to eliminate a player at night (a potion of death).\n\nGAME RULE:\nThe game is consisted of two phases: night phase and day phase. The two phases are repeated until werewolf or villager win the game.\n1. Night Phase: During the night, the werewolves discuss and vote for a player to eliminate. Special roles also perform their actions at this time (e.g., the Seer chooses a player to learn their role, the witch chooses a decide if save the player).\n2. Day Phase: During the day, all surviving players discuss who they suspect might be a werewolf. No one reveals their role unless it serves a strategic purpose. After the discussion, a vote is taken, and the player with the most votes is \"lynched\" or eliminated from the game.\n\nVICTORY CONDITION:\nFor werewolves, they win the game if the number of werewolves is equal to or greater than the number of remaining villagers.\nFor villagers, they win if they identify and eliminate all of the werewolves in the group.\n\nCONSTRAINTS:\n1. Your response should be in the first person.\n2. This is a conversational game. You should response only based on the conversation history and your strategy.\n\nYou are playing witch in this game.\n"
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Player6, you're the witch. Tonight Player3 is eliminated. Would you like to resurrect Player3? Respond in the following format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\",\n    \"speak\": \"thoughts summary to say\",\n    \"resurrect\": true/false\n}"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I'm contemplating whether to save Player3. It's difficult to make a decision without any solid clues."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Would you like to eliminate one player? Respond in the following json format which can be loaded by python json.loads()\n{{\n    \"thought\": \"thought\", \n    \"speak\": \"thoughts summary to say\",\n    \"eliminate\": ture/false\n}}"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I think it's too early for drastic measures. We need more information."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "The day is coming, all the players open your eyes. Last night, the following player(s) has been eliminated: Player3."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Now the alive players are Player1, Player2, Player4, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to vote a player eliminated among alive players and to win the game, what do you want to say to others? You can decide whether to reveal your role. Respond in the following JSON format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\" ,\n    \"speak\": \"thought summary to say to others\"\n}"
+            },
+            {
+                "name": "Player1",
+                "role": "assistant",
+                "content": "I can't believe Player3 is gone! They were so observant, it's a big loss. I've been noticing that Player4 has been quite vocal. Could they be trying to divert attention from themselves?"
+            },
+            {
+                "name": "Player2",
+                "role": "assistant",
+                "content": "I agree with Player1. Player4 has been quite vocal. It seems like they are trying to divert attention from themselves. We need to keep an eye on them."
+            },
+            {
+                "name": "Player4",
+                "role": "assistant",
+                "content": "I can understand why you might think I'm trying to divert attention, but I assure you, I'm a villager. I've been vocal because I'm trying to figure out who the werewolves are, just like everyone else. Isn't it a bit suspicious that both Player1 and Player2 are accusing me? Could they be the werewolves trying to eliminate a villager?"
+            },
+            {
+                "name": "Player5",
+                "role": "assistant",
+                "content": "I understand the suspicions against Player4, but we need to be careful not to let the werewolves manipulate us into killing our own. I have some information that might help. I'm the seer, and last night, I checked Player3. They were a villager. I think we need to reconsider our suspicions and think about who could have benefited from Player3's death."
+            }
+        ],
+        "temperature": 0.5
+    },
+    "response": {
+        "id": "chatcmpl-941t8wqWyYbYQOOIHmM8S9BVAWkeM",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "{\n    \"thought\": \"Player5 claims to be the seer and says that Player3 was a villager. This is valuable information. I am suspicious of Player1 and Player2 who were quick to accuse Player4. I need to be cautious with my words as revealing my role might put me in danger.\",\n    \"speak\": \"Player5's information is crucial for us. I agree with Player4, it's suspicious that Player1 and Player2 were quick to accuse. Let's keep that in mind before making any decision.\"\n}",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710747598,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 111,
+            "prompt_tokens": 1071,
+            "total_tokens": 1182
+        }
+    }
+}

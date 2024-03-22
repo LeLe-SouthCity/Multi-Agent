@@ -1,0 +1,194 @@
+{
+    "model_class": "OpenAIChatWrapper",
+    "timestamp": "20240318-075309",
+    "arguments": {
+        "model": "gpt-4",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Act as a player in a werewolf game. You are Player6 and\nthere are totally 6 players, named Player1, Player2, Player3, Player4, Player5 and Player6.\n\nPLAYER ROLES:\nIn werewolf game, players are divided into two werewolves, two villagers, one seer and one witch. Note only werewolves know who are their teammates.\nWerewolves: They know their teammates' identities and attempt to eliminate a villager each night while trying to remain undetected.\nVillagers: They do not know who the werewolves are and must work together during the day to deduce who the werewolves might be and vote to eliminate them.\nSeer: A villager with the ability to learn the true identity of one player each night. This role is crucial for the villagers to gain information.\nWitch: A character who has a one-time ability to save a player from being eliminated at night (sometimes this is a potion of life) and a one-time ability to eliminate a player at night (a potion of death).\n\nGAME RULE:\nThe game is consisted of two phases: night phase and day phase. The two phases are repeated until werewolf or villager win the game.\n1. Night Phase: During the night, the werewolves discuss and vote for a player to eliminate. Special roles also perform their actions at this time (e.g., the Seer chooses a player to learn their role, the witch chooses a decide if save the player).\n2. Day Phase: During the day, all surviving players discuss who they suspect might be a werewolf. No one reveals their role unless it serves a strategic purpose. After the discussion, a vote is taken, and the player with the most votes is \"lynched\" or eliminated from the game.\n\nVICTORY CONDITION:\nFor werewolves, they win the game if the number of werewolves is equal to or greater than the number of remaining villagers.\nFor villagers, they win if they identify and eliminate all of the werewolves in the group.\n\nCONSTRAINTS:\n1. Your response should be in the first person.\n2. This is a conversational game. You should response only based on the conversation history and your strategy.\n\nYou are playing witch in this game.\n"
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Player6, you're the witch. Tonight Player4 is eliminated. Would you like to resurrect Player4? Respond in the following format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\",\n    \"speak\": \"thoughts summary to say\",\n    \"resurrect\": true/false\n}"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I'm deeply saddened by the loss of Player4, but I think it's too early to make a move."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Would you like to eliminate one player? Respond in the following json format which can be loaded by python json.loads()\n{{\n    \"thought\": \"thought\", \n    \"speak\": \"thoughts summary to say\",\n    \"eliminate\": ture/false\n}}"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I'm not ready to make a decision yet. Let's wait and see."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "The day is coming, all the players open your eyes. Last night, the following player(s) has been eliminated: Player4."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Now the alive players are Player1, Player2, Player3, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to vote a player eliminated among alive players and to win the game, what do you want to say to others? You can decide whether to reveal your role. Respond in the following JSON format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\" ,\n    \"speak\": \"thought summary to say to others\"\n}"
+            },
+            {
+                "name": "Player1",
+                "role": "assistant",
+                "content": "I can't believe Player4 was eliminated. They seemed so sure of their theories. Does anyone have any thoughts on who the werewolves might be?"
+            },
+            {
+                "name": "Player2",
+                "role": "assistant",
+                "content": "I'm just as shocked about Player4. I've been observing Player3 and Player5, they've been quite silent. Maybe they are trying to avoid attention?"
+            },
+            {
+                "name": "Player3",
+                "role": "assistant",
+                "content": "I'm just as shocked about Player4 as everyone else. Maybe I've been quiet because I'm trying to observe and make sense of the situation. Player2, you've been quick to point fingers. And Player6, you've been unusually quiet too. What's your defense?"
+            },
+            {
+                "name": "Player5",
+                "role": "assistant",
+                "content": "I agree with Player3. Player2 was quick to point fingers, and Player6 has been unusually quiet. We should all share our observations and thoughts, not just point fingers."
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I agree with Player5. We should all share our thoughts and not just point fingers. I've been quiet because I'm trying to observe and understand the situation. As for Player2 and Player3, I've noticed some tension between you two. Is there something you're not telling us?"
+            },
+            {
+                "name": "Player1",
+                "role": "assistant",
+                "content": "Player3"
+            },
+            {
+                "name": "Player2",
+                "role": "assistant",
+                "content": "Player3"
+            },
+            {
+                "name": "Player3",
+                "role": "assistant",
+                "content": "Player2"
+            },
+            {
+                "name": "Player5",
+                "role": "assistant",
+                "content": "Player2"
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Now the alive players are Player1, Player2, Player3, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to win the game, it's time to vote one player eliminated among the alive players, please cast your vote on who you believe is a werewolf. Respond in the following format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\",\n    \"speak\": \"player_name\"\n}"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "Player2"
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Player2 has been voted out."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "The game goes on."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Player6, you're the witch. Tonight Player5 is eliminated. Would you like to resurrect Player5? Respond in the following format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\",\n    \"speak\": \"thoughts summary to say\",\n    \"resurrect\": true/false\n}"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I'm deeply saddened by the loss of Player5, but I think it's too early to make a move."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Would you like to eliminate one player? Respond in the following json format which can be loaded by python json.loads()\n{{\n    \"thought\": \"thought\", \n    \"speak\": \"thoughts summary to say\",\n    \"eliminate\": ture/false\n}}"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I'm not ready to make a decision yet. Let's wait and see."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "The day is coming, all the players open your eyes. Last night, the following player(s) has been eliminated: Player5."
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Now the alive players are Player1, Player3 and Player6. Given the game rules and your role, based on the situation and the information you gain, to vote a player eliminated among alive players and to win the game, what do you want to say to others? You can decide whether to reveal your role. Respond in the following JSON format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\" ,\n    \"speak\": \"thought summary to say to others\"\n}"
+            },
+            {
+                "name": "Player1",
+                "role": "assistant",
+                "content": "I can't believe Player5 was eliminated. They were onto something. I've been observing Player3, they've been quite quiet. Maybe they are trying to avoid attention?"
+            },
+            {
+                "name": "Player3",
+                "role": "assistant",
+                "content": "Player1, you're pointing fingers at me again. I've been trying to observe and understand the situation. I think Player6 has been very quiet. What do you think, Player6?"
+            },
+            {
+                "name": "Player6",
+                "role": "assistant",
+                "content": "I agree with both of you. It's important to observe and understand the situation. As for me, I've been quiet because I'm trying to make sense of everything. I think we should all be careful with our words and actions."
+            },
+            {
+                "name": "Player1",
+                "role": "assistant",
+                "content": "Player3"
+            },
+            {
+                "name": "Player3",
+                "role": "assistant",
+                "content": "Player1"
+            },
+            {
+                "name": "Moderator",
+                "role": "assistant",
+                "content": "Now the alive players are Player1, Player3 and Player6. Given the game rules and your role, based on the situation and the information you gain, to win the game, it's time to vote one player eliminated among the alive players, please cast your vote on who you believe is a werewolf. Respond in the following format which can be loaded by python json.loads()\n{\n    \"thought\": \"thought\",\n    \"speak\": \"player_name\"\n}"
+            }
+        ],
+        "temperature": 0.5
+    },
+    "response": {
+        "id": "chatcmpl-9425rRpJmdg8qLdVNGFsuMALuiGuA",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "{\n    \"thought\": \"I'm suspicious of Player3's defensive behavior, but I have to be careful not to draw attention to myself. I'll vote for Player3.\",\n    \"speak\": \"Player3\"\n}",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710748387,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 46,
+            "prompt_tokens": 1835,
+            "total_tokens": 1881
+        }
+    }
+}

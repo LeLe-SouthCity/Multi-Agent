@@ -1,0 +1,173 @@
+2024-03-18 09:20:46.925 | INFO     | agentscope.models:read_model_configs:171 - Load configs for model wrapper: gpt-4, my_post_api
+2024-03-18 09:20:47.183 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-18 09:20:47.184 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-18 09:20:47.185 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs/run_20240318-092045_me3ar5/agentscope.db]
+2024-03-18 09:20:47.188 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 09:20:47.252 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 09:20:47.254 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.cost] to SqliteMonitor with unit [dollor] and quota [None]
+2024-03-18 09:20:47.383 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.prompt_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 09:20:47.717 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.completion_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 09:20:48.063 | INFO     | agentscope.utils.monitor:register:362 - Register metric [gpt-4.total_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-18 09:20:48.144 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 09:20:48.202 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 09:20:48.206 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 09:20:48.255 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 09:20:48.257 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 09:20:48.316 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 09:20:48.319 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 09:20:48.362 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+2024-03-18 09:20:48.365 | INFO     | agentscope.models.model:__init__:239 - Initialize model [gpt-4]
+2024-03-18 09:20:48.407 | INFO     | agentscope.utils.monitor:register_budget:554 - set budget None to gpt-4
+Moderator: Player1 and Player2, if you are the only werewolf, eliminate a player. Otherwise, discuss with your teammates and reach an agreement. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say to others",
+    "agreement": "whether the discussion reached an agreement or not(true/false)"
+}
+Player1: Hey Player2, what do you think about targeting Player3? They seem to be quite active during the day phase.
+Player2: I see your point about Player3, Player1. But don't you think it's a bit risky? Active players usually attract more attention. If Player3 is eliminated, others might suspect us.
+2024-03-18 09:20:59.053 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "That's a good point, Player2. We should be careful not to draw attention to ourselves. How about we target Player4 instead? They have been quite quiet, and their elimination might not raise too many suspicions.",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-943SrrGHnjgp6pSXSXwAXuLki9oFu",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "That's a good point, Player2. We should be careful not to draw attention to ourselves. How about we target Player4 instead? They have been quite quiet, and their elimination might not raise too many suspicions.",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710753657,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 44,
+            "prompt_tokens": 645,
+            "total_tokens": 689
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 1 / 3
+2024-03-18 09:21:01.732 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "That's a good point, Player2. We should target someone who is less active to avoid suspicion. What do you think about Player4? They've been pretty quiet.",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-943SuFIrGmunBB9hlyXotg4PElxPq",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "That's a good point, Player2. We should target someone who is less active to avoid suspicion. What do you think about Player4? They've been pretty quiet.",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710753660,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 35,
+            "prompt_tokens": 645,
+            "total_tokens": 680
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 2 / 3
+Player1: You're right, Player2. Maybe we should consider someone less active?
+2024-03-18 09:21:09.630 | WARNING  | agentscope.models.model:checking_wrapper:178 - Fail to parsing response: {
+    "text": "I agree, Player1. How about Player5? They have been relatively quiet, so their sudden elimination might not raise any suspicions.",
+    "embedding": null,
+    "image_urls": null,
+    "raw": {
+        "id": "chatcmpl-943T2ZAHoLiuQJR6sTw3x5lBuKuAp",
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                    "content": "I agree, Player1. How about Player5? They have been relatively quiet, so their sudden elimination might not raise any suspicions.",
+                    "role": "assistant",
+                    "function_call": null,
+                    "tool_calls": null
+                }
+            }
+        ],
+        "created": 1710753668,
+        "model": "gpt-4-0613",
+        "object": "chat.completion",
+        "system_fingerprint": null,
+        "usage": {
+            "completion_tokens": 27,
+            "prompt_tokens": 667,
+            "total_tokens": 694
+        }
+    }
+}.
+ Exception: Expecting value: line 1 column 1 (char 0), 	 Attempt 1 / 3
+Player2: I agree with you, Player1. Maybe we should consider a less active player. Player4 and Player5 haven't been contributing much to the discussions.
+Moderator: Which player do you vote to kill? Respond in the following format which can be loaded by python json.loads()
+{{
+   "thought": "thought" ,
+   "speak": "player_name"
+}}
+Player1: Player4
+Player2: Player4
+Moderator: The player with the most votes is Player4.
+Moderator: Player6, you're the witch. Tonight Player4 is eliminated. Would you like to resurrect Player4? Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "thoughts summary to say",
+    "resurrect": true/false
+}
+Player6: It's a sad day to see one of us gone. I hope we can find the werewolves soon.
+Moderator: Would you like to eliminate one player? Respond in the following json format which can be loaded by python json.loads()
+{{
+    "thought": "thought", 
+    "speak": "thoughts summary to say",
+    "eliminate": ture/false
+}}
+Player6: I have a bad feeling about Player2. He's been too quiet.
+Moderator: Player5, you're the seer. Which player in Player1, Player2, Player3, Player4, Player5 and Player6 would you like to check tonight? Respond in the following json format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "player_name"
+}
+Player5: Player1
+Moderator: Okay, the role of Player1 is a werewolf.
+Moderator: The day is coming, all the players open your eyes. Last night, the following player(s) has been eliminated: Player4 and Player2.
+Moderator: Now the alive players are Player1, Player3, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to vote a player eliminated among alive players and to win the game, what do you want to say to others? You can decide whether to reveal your role. Respond in the following JSON format which can be loaded by python json.loads()
+{
+    "thought": "thought" ,
+    "speak": "thought summary to say to others"
+}
+Player1: I was surprised to see Player2 eliminated. I thought they were contributing well to the discussions. I have a feeling Player6 might be a werewolf because they've been very quiet. What do you all think?
+Player3: I agree with Player1. Player6 has been very quiet, which is suspicious. We should consider voting them out. But we also need to be careful and observe everyone's behavior, including Player1's.
+Player5: I agree with both of you that Player6 has been quiet, but I also noticed that Player1 has been very active in the discussions. It could be a strategy to divert our attention. We should keep an eye on both Player1 and Player6.
+Player6: I understand your suspicions because I've been quiet. But I assure you, I'm not a werewolf. I've been observing everyone's behavior, and I have my doubts about Player1. They've been very active in the discussions, which could be a strategy to divert our attention.
+Moderator: Now the alive players are Player1, Player3, Player5 and Player6. Given the game rules and your role, based on the situation and the information you gain, to win the game, it's time to vote one player eliminated among the alive players, please cast your vote on who you believe is a werewolf. Respond in the following format which can be loaded by python json.loads()
+{
+    "thought": "thought",
+    "speak": "player_name"
+}
+Player1: Player6
+Player3: Player1
+Player5: Guys, I have something to reveal. I am the seer and I checked Player1 last night. He is a werewolf. I vote for Player1.
+Player6: Player1
+Moderator: Player1 has been voted out.
+Moderator: The game is over. The werewolves have been defeated, and the village is safe once again!
